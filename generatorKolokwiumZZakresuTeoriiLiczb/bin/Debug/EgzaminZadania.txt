@@ -1,0 +1,22 @@
+Zadanie 1
+A) 11 B) p=19 x=6C) q=15 y=3 D) DD451CICzy podzielna przez xTrue
+Zadanie 2 
+P=17 x1=1092x w sytemie P 3D4 q=5 y1=2720y w sytemie P 41340Największy współny dzielnik=4 Najmniejszy wspólns wielokrotność=1092
+Zadanie 3
+A) a=58 b=66 c=860x=8 y=6
+B)  a=66 b=6 c=565x=8 y=6
+Zadanie 4 A) 
+A) a=34 b=17 c=578x=14 y=6
+B)  a=57 b=6 c=322x=5 y=6
+Zadanie 5
+a=64 b=199 x=28
+Zadanie 6
+a=160 b=-5 c=813 d=-255e=494 n=185685 k=4421 p=43
+Zadanie 7
+a=-90 b=76 c=-30 p=7 q=11 r=4
+Zadanie 8
+ a=4 b=-10 c=6 d-18 e7 f5 k=-12 n=19 k1-7
+Zadanie 9
+phi=3200 n=4675 p=5 q=11 r=17
+Zadanie 10
+Phi=288 n=7525 p=5 q=7 r43 K1=434 K2=53 k=125227 wynik=4819
