@@ -8,6 +8,8 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex1
 {
     public class Exercise1:IExercise
     {
+
+
         public Exercise1()
         {
             GetNumbers();
@@ -18,6 +20,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex1
         public int Y { get; set; }
         public int DataBDivior { get; set; }
         public string Number { get; set; }
+        public int DataDNumberSum { get; set; }
         public bool IsDividable { get; set; }
         private void GetNumbers()
         {
@@ -32,7 +35,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex1
         public string GetOutput()
         {
             return "Zadanie 1"+ Environment.NewLine+ 
-                "A) " + DataA + " B) p=" + P + " x=" + DataBDivior + "C) q="+Q+" y="+Y +" D) "+ Number + "Czy podzielna przez x" + IsDividable.ToString();
+                "A) " + DataA + " B) p=" + P + " x=" + DataBDivior + "C) q="+Q+" y="+Y +" D) "+ Number + "Czy podzielna przez x="+ DataBDivior+" " + IsDividable +" suma cyfr: "+ DataDNumberSum;
         }
         
 
@@ -44,7 +47,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex1
         {
             var counter = 0;
             P = MathService.Stamp.Next(11, 20);
-            var max = P / 2 + 1;
+            var max = P / 2;
             if (random)
             {
                 var rest = 0;
@@ -104,9 +107,16 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex1
             for (int i = 0; i < numberLength; i++)
             {
                 var index = MathService.Stamp.Next(0, P + 1);
+                if (i==0)
+                {
+                    index= MathService.Stamp.Next(1, P + 1);
+                }
                 Number = Number += MathService.BaseNumbers[index];
             }
-            IsDividable = MathService.StringToDecimalValue(Number, P)%DataBDivior==0;
+            DataDNumberSum = MathService.GetNumberSumInDecimal(Number, P);
+            //var decimalValue = MathService.StringToDecimalValue(Number, P);
+            IsDividable = DataDNumberSum % DataBDivior == 0;
+            //IsDividable = decimalValue % DataBDivior==0;
         }
 
         

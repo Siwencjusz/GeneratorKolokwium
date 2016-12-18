@@ -180,5 +180,19 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises
             }
             return num2;
         }
+
+        public static int GetNumberSumInDecimal(string number,int numberBase)
+        {
+            var numberArray = number.ToCharArray();
+            var result = 0;
+
+            foreach (var letter in numberArray)
+            {
+                result += MathService.StringToDecimalValue(letter.ToString(), numberBase);
+            }
+            
+
+            return result;
+        }
     }
 }

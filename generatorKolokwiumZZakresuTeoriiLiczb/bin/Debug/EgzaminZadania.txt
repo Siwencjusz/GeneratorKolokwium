@@ -1,22 +1,22 @@
 Zadanie 1
-A) 11 B) p=19 x=6C) q=15 y=3 D) DD451CICzy podzielna przez xTrue
+A) 11 B) p=16 x=3C) q=12 y=6 D) GD52465Czy podzielna przez x=3 True suma cyfr: 51
 Zadanie 2 
-P=17 x1=1092x w sytemie P 3D4 q=5 y1=2720y w sytemie P 41340Największy współny dzielnik=4 Najmniejszy wspólns wielokrotność=1092
+P=18 x1=3315x w sytemie P A43 q=4 y1=588y w sytemie P 21030Największy współny dzielnik=3 Najmniejszy wspólns wielokrotność=3315
 Zadanie 3
-A) a=58 b=66 c=860x=8 y=6
-B)  a=66 b=6 c=565x=8 y=6
+A) a=40 b=65 c=655x=5 y=7
+B)  a=40 b=4 c=229x=5 y=7
 Zadanie 4 A) 
-A) a=34 b=17 c=578x=14 y=6
-B)  a=57 b=6 c=322x=5 y=6
+A) a=2 b=16 c=126x=7 y=7
+B)  a=54 b=3 c=130x=2 y=7
 Zadanie 5
-a=64 b=199 x=28
+a=251 b=426 x=185
 Zadanie 6
-a=160 b=-5 c=813 d=-255e=494 n=185685 k=4421 p=43
+a=720 b=-98 c=956 d=620e=297 n=108759 k=3021 p=37
 Zadanie 7
-a=-90 b=76 c=-30 p=7 q=11 r=4
+a=-15 b=66 c=86 p=13 q=7 r=17
 Zadanie 8
- a=4 b=-10 c=6 d-18 e7 f5 k=-12 n=19 k1-7
+ a=-14 b=5 c=-11 d-11 e-12 f10 k=209 n=32 k1-17
 Zadanie 9
-phi=3200 n=4675 p=5 q=11 r=17
+phi=7040 n=15088 p=4 q=23 r=41
 Zadanie 10
-Phi=288 n=7525 p=5 q=7 r43 K1=434 K2=53 k=125227 wynik=4819
+Phi=352 n=8225 p=5 q=7 r47 K1=454 K2=78 k=160082 wynik=3800
