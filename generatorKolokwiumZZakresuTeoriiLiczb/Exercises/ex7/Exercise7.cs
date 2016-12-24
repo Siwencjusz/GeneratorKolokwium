@@ -16,14 +16,14 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex7
 
         private void GetNumbers()
         {
-            P = MathService.GetPrimeNumber(20);
+            P = MathService.GetPrimeNumber(14);
             do
             {
-                Q = MathService.GetPrimeNumber(20);
+                Q = MathService.GetPrimeNumber(14);
             } while (Q==P);
             do
             {
-                R = MathService.GetPrimeNumber(20);
+                R = MathService.GetPrimeNumber(14);
             } while (R==Q||R==P);
             A = MathService.Stamp.Next(-100, 100);
             B = MathService.Stamp.Next(-100, 100);

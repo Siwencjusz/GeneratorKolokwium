@@ -20,6 +20,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania
         {
             PartA = new EquasionData(FindAAndB());
             PartA.InsertXYC(FindXYC(0, PartA));
+            PartA.IsHasSolution = true;
             PartB = new EquasionData(FindAAndB());
             PartB.InsertXYC(FindXYC(1, PartB));
         }
@@ -27,8 +28,9 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania
         {
 
             return "Zadanie 3" + Environment.NewLine + "A) a=" + PartA.a + " b=" + PartA.b + " c=" + PartA.c + "x=" +
-                   PartA.x + " y=" + PartA.y + Environment.NewLine +
-                   "B)  a=" + PartB.a + " b=" + PartB.b + " c=" + PartB.c + "x=" + PartB.x + " y=" + PartB.y;
+                   PartA.x + " y=" + PartA.y + " a1=" + PartA.a1 + " b1="+ PartA.b1 + " c1="+ PartA.c1 + " d=NWD(a,b)="+ PartA.d+
+
+                   Environment.NewLine +"B)  a=" + PartB.a + " b=" + PartB.b + " c=" + PartB.c + "x=" + PartB.x + " y=" + PartB.y+ " Brak rozwiązania";
         }
         public static string ExerciseText = "Rozwiązać w liczbach całkowitych równania liniowe";
         public EquasionData PartA;

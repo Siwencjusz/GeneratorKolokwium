@@ -35,7 +35,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex1
         public string GetOutput()
         {
             return "Zadanie 1"+ Environment.NewLine+ 
-                "A) " + DataA + " B) p=" + P + " x=" + DataBDivior + "C) q="+Q+" y="+Y +" D) "+ Number + "Czy podzielna przez x="+ DataBDivior+" " + IsDividable +" suma cyfr: "+ DataDNumberSum;
+                "A) " + DataA + " B) p=" + P + " x=" + DataBDivior + "C) q="+Q+" y="+Y +" D) "+ Number + "Czy podzielna przez x="+ DataBDivior+" Czy podzielna: " + IsDividable +" suma cyfr: "+ DataDNumberSum;
         }
         
 

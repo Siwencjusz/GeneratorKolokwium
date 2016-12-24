@@ -21,7 +21,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex6
 
         private void GetNumbers()
         {
-            P = MathService.GetPrimeNumber(100);
+            P = MathService.GetPrimeNumber(14);
             A = MathService.Stamp.Next(-1000, 1000);
             B = MathService.Stamp.Next(-1000, 1000);
             C = MathService.Stamp.Next(-1000, 1000);

@@ -18,6 +18,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania.ex4
         {
             PartA = new EquasionData(FindAAndB());
             PartA.InsertXYC(FindXYC(0, PartA));
+            PartA.IsHasSolution = true;
             PartB = new EquasionData(FindAAndB());
             PartB.InsertXYC(FindXYC(1, PartB));
         }
@@ -55,9 +56,16 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania.ex4
 
         public string GetOutput()
         {
-            return "Zadanie 4 A) "+ Environment.NewLine + "A) a=" + PartA.a + " b=" + PartA.b + " c=" + PartA.c + "x=" +
-                   PartA.x + " y=" + PartA.y + Environment.NewLine +
-                   "B)  a=" + PartB.a + " b=" + PartB.b + " c=" + PartB.c + "x=" + PartB.x + " y=" + PartB.y;
+            return "Zadanie 4 " + Environment.NewLine + "A) a=" + PartA.a + " b=" + PartA.b + " c=" + PartA.c + " x=" +
+                   PartA.x + " y=" + PartA.y + " a1=" + PartA.a1 + " b1=" + PartA.b1 + " c1=" + PartA.c1 +
+                   " d=NWD(a,b)=" + PartA.d + " a2=" + PartA.a2 + " c2=" + PartA.c2 + " x2=" + PartA.x2+
+
+
+                   Environment.NewLine +
+                   "B)  a=" + PartB.a + " b=" + PartB.b + " c=" + PartB.c + "x=" + PartB.x + " y=" + PartB.y + " a2=" + PartB.a2 + " c2="+ PartB.c2+" brak rozwiązania";
         }
     }
 }
+//Odpowiedź: a) d=NWD(a, b), a1=a/d, b1=b/d, c1=c/d, x, y oraz
+// a2=a mod b, c2=c mod b, x2=x mod b
+//b) brak rozwiązania oraz a2 = a mod b, c2 = c mod b

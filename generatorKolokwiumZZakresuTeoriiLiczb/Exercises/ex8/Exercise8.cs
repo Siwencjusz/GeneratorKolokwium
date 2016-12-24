@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 using generatorKolokwiumZZakresuTeoriiLiczb.Zadania;
 
 namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex8
@@ -21,9 +22,16 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex8
             D = MathService.Stamp.Next(-20, 20);
             K = A * D - B * C;
             N = MathService.Stamp.Next(10, 40);
-            E = MathService.Stamp.Next(-20, 20);
-            F = MathService.Stamp.Next(-20, 20);
             K1 = K % N;
+            X = MathService.Stamp.Next(1, N - 1);
+            do
+            {
+                Y = MathService.Stamp.Next(1, N - 1);
+            } while (X == Y);
+
+            E = A*X + B*Y + N;
+            F = C*X + D*Y - N;
+            F = MathService.Stamp.Next(-20, 20);
 
             if (K1 < 0)
             {
@@ -36,8 +44,12 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex8
             }
 
 
+
         }
 
+        public int Y { get; set; }
+
+        public int X { get; set; }
 
 
         public int K1 { get; set; }
@@ -52,7 +64,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex8
         public int A { get; set; }
         public string GetOutput()
         {
-            return "Zadanie 8" + Environment.NewLine + " a=" + A+ " b="+ B+ " c="+C+ " d"+ D+ " e"+ E + " f"+ F+ " k="+ K+ " n="+N+ " k1-"+ K1;
+            return "Zadanie 8" + Environment.NewLine + " x="+X+ " Y="+Y+ " a=" + A+ " b="+ B+ " c="+C+ " d="+ D+ " e="+ E + " f="+ F+ " k="+ K+ " n="+N+ " k1="+ K1;
         }
     }
 }

@@ -19,10 +19,10 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex9
         private void GetNumbers()
         {
             P = MathService.GetPrimeNumber(5, 2);
-            Q = MathService.GetPrimeNumber(23, 7);
+            Q = MathService.GetPrimeNumber(13, 7);
             do
             {
-                R = MathService.GetPrimeNumber(50, 11);
+                R = MathService.GetPrimeNumber(50, 17);
             } while (R == Q);
             N =P* P * Q * R;
             Phi = MathService.PHI(N);

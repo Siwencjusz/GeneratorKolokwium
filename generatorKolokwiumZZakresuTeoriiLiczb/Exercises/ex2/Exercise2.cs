@@ -85,7 +85,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania
         {
             return "Zadanie 2 " + Environment.NewLine+
             "P=" + P + " x1=" + X1 + "x w sytemie P " + X + " q=" + Q + " y1=" + Y1 + "y w sytemie P " + Y +
-                   "Największy współny dzielnik=" + GCD + " Najmniejszy wspólns wielokrotność=" + LCM;
+                   " Największy współny dzielnik=" + GCD + " Najmniejszy wspólns wielokrotność=" + LCM;
         }
     }
 }
