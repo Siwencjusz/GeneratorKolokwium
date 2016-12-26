@@ -9,6 +9,8 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises
 {
     public class Exercise5 : IExercise
     {
+
+
         public Exercise5()
         {
             GetNumbers();
@@ -27,6 +29,11 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises
             A = data.FirstOrDefault();
             B = data.LastOrDefault();
             X = 0;
+ //           Odpowiedź: x, y oraz
+ //a2 = a mod b, c2 = c mod b, x2 = x mod b
+            a2 = a%b;
+            c2 = 1%b;
+            x2 = X%b;
             var counter = 0;
             do
             {
@@ -44,6 +51,10 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises
             }
         }
 
+        public int x2 { get; set; }
+
+        public int c2 { get; set; }
+
         public int X { get; set; }
 
 
@@ -51,11 +62,11 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises
 
         public int A { get; private set; }
         public int Modulo { get; private set; }
-
+        public int a2 {get; set;}
 
         public string GetOutput()
         {
-            return "Zadanie 5" + Environment.NewLine + "a=" + A + " b=" + B + " x=" + X;
+            return "Zadanie 5" + Environment.NewLine + "a=" + A + " b=" + B + " x=" + X + " a2="+a2+" c2="+c2+" x2="+ x2;
         }
     }
 }

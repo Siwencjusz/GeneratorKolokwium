@@ -11,17 +11,18 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises
         private static char[] baseNumbers = BaseNumbers.ToCharArray();
         public static string IntToString(int value, int sysBase)
         {
-            char[] baseChars = baseNumbers.Take(sysBase).ToArray();
+          
             string result = string.Empty;
+            char[] baseChars = baseNumbers.Take(sysBase).ToArray();
             int targetBase = baseChars.Length;
 
             do
             {
-                
+                string toAdd = string.Empty;
                 if (value>0)
                 {
                     var index = value % targetBase;
-                    var toAdd = baseChars[index].ToString();
+                    toAdd = baseChars[index].ToString();
                     result = toAdd + result;
                     value = value / targetBase;
                 }
@@ -134,6 +135,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises
         public static bool IsNumberHas3Divisors(int number, int numberOfDivisors)
         {
             List<int> listofDivisors=new List<int>();
+            listofDivisors.Clear();
             do
             {
                 var listLength = listofDivisors.Count;
@@ -146,7 +148,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises
                     if (number%i==0)
                     {
                         number = number/i;
-                        if (!listofDivisors.Contains(i))
+                        if (listofDivisors.All(x => x != i))
                         {
                             listofDivisors.Add(i);
                         }

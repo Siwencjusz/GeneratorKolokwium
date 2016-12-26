@@ -25,9 +25,13 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex9
                 R = MathService.GetPrimeNumber(50, 17);
             } while (R == Q);
             N =P* P * Q * R;
-            Phi = MathService.PHI(N);
+            //Phi = MathService.PHI(N);
+            Phi=P*(Q - 1)*(Q - 1)*(R - 1);
         }
 
+        //public int Phi2 { get; set; }
+
+        
         public int Phi { get; set; }
 
         public int N { get; set; }
@@ -40,6 +44,6 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex9
         public string GetOutput()
         {
             return "Zadanie 9" + Environment.NewLine +"phi="+Phi+ " n=" + N + " p=" + P + " q=" + Q + " r=" + R;
-        }
+        }//Odpowiedź: wypisać p, q, r oraz φ(n)=p*(p-1)*(q-1)*(r-1). 
     }
 }

@@ -35,7 +35,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania
 
         public static List<string> BaseNumbersList= new List<string>();
         public static List<string> BaseString = new List<string>();
-        private static int BaseInDecimal { get; set; }
+        private static double BaseInDecimal { get; set; }
         private string exerciseText = "Sformułować i udowodnić cechę podzielności przez  a) ";
         private string exerciseText2 = "b)";
         private string exerciseText3 = "w systemie dziesiątkowym";
@@ -76,7 +76,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania
             for (int i = 0; i < 10; i++)
             {
                 var valueInDecimal = BaseNumbersList.IndexOf(BaseString[i]);
-                BaseInDecimal += valueInDecimal * BaseNumbersList.Count() ^ (10 - i);
+                BaseInDecimal += valueInDecimal * Math.Pow(BaseNumbersList.Count(), (10 - i));
             }
         }
         /// <summary>

@@ -30,7 +30,34 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex6
             K = MathService.Stamp.Next(1000, 10000);
             N = K*(P - 1) + 3;
 
+
+           // Odpowiedź: wypisać d1 = d mod p oraz e1 = e mod p. 
+           //Następnie w wyrażeniu podstawiać w miejsce x kolejne liczby od 1 do p - 1 i wypisać otrzymaną wartość w oraz w1 = w mod p.
+           //Jeżeli w1 = e1 to x jest rozwiązaniem, w pp nie jest rozwiązaniem.
+
+            d1 = D%P;
+            e1 = E%P;
+            for (int i = 1; i < P; i++)
+            {
+                var w = Math.Pow((A + 1)*i, 3) + Math.Pow(B*i, 2) + C*i + D;
+                var w1 = w%P;
+                var row = "W=" + w + " W1=" + w1;
+                if (w1==e1)
+                {
+                    row = row + " x=" + i + " jest rozwiązaniem";
+                }
+                else
+                {
+                    row= row + " x=" + i + " nie jest rozwiązaniem";
+                }
+                wList.Add(row);
+            }
         }
+
+        public int e1 { get; set; }
+        private List<string> wList= new List<string>();
+        public int d1 { get; set; }
+
         public int N { get; set; }
         public int K { get; set; }
         public int E { get; set; }
@@ -41,8 +68,14 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex6
         public int P { get; set; }
         public string GetOutput()
         {
-            return "Zadanie 6" + Environment.NewLine + "a=" + A + " b=" + B + " c=" + C + " d=" + D + "e=" + E + " n=" +
-                   N + " k=" + K + " p=" + P;
+            var solution = "Zadanie 6" + Environment.NewLine + "a=" + A + " b=" + B + " c=" + C + " d=" + D + "e=" + E +
+                           " n=" +
+                           N + " k=" + K + " p=" + P ;
+            foreach (var w in wList)
+            {
+                solution=solution + Environment.NewLine + w;
+            }
+            return solution;
         }
     }
 }

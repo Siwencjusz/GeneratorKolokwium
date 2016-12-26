@@ -1,22 +1,56 @@
 Zadanie 1
-A) 9 B) p=19 x=4C) q=14 y=7 D) G2CC394Czy podzielna przez x=4 Czy podzielna: False suma cyfr: 58
+A) 11 B) p=16 x=5C) q=18 y=3 D) ECB60EA2Czy podzielna przez x=5 Czy podzielna: False suma cyfr: 69
 Zadanie 2 
-P=17 x1=867x w sytemie P 300 q=4 y1=680y w sytemie P 22220 Największy współny dzielnik=17 Najmniejszy wspólns wielokrotność=867
+P=16 x1=2480x w sytemie P 9B0 q=3 y1=150y w sytemie P 12120 Największy współny dzielnik=10 Najmniejszy wspólns wielokrotność=2480
 Zadanie 3
-A) a=25 b=50 c=375x=3 y=6 a1=1 b1=2 c1=15 d=NWD(a,b)=25
-B)  a=52 b=28 c=325x=3 y=6 b)	Brak rozwiązania
+A) a=2 b=6 c=70x=8 y=9 a1=1 b1=3 c1=35 d=NWD(a,b)=2
+B)  a=26 b=66 c=803x=8 y=9 Brak rozwiązania
 Zadanie 4 
-A) a=5 b=15 c=110 x=4 y=6 a1=1 b1=3 c1=22 d=NWD(a,b)=5 a2=5 c2=5 x2=4
-B)  a=78 b=16 c=409x=4 y=6 a2=14 c2=9 brak rozwiązania
+A) a=40 b=10 c=410 x=8 y=9 a1=4 b1=1 c1=41 d=NWD(a,b)=10 a2=0 c2=0 x2=8
+B)  a=96 b=15 c=667x=6 y=6 a2=6 c2=7 brak rozwiązania
 Zadanie 5
-a=72 b=469 x=228
+a=103 b=106 x=35 a2=103 c2=1 x2=0
 Zadanie 6
-a=982 b=648 c=-233 d=917e=0 n=13257 k=2209 p=7
+a=-800 b=42 c=412 d=-788e=-272 n=28071 k=4678 p=7
+W=-510081011 W1=-6 x=1 jest rozwiązaniem
+W=-4080652100 W1=0 x=2 nie jest rozwiązaniem
+W=-13772208449 W1=-6 x=3 jest rozwiązaniem
+W=-32645244452 W1=-2 x=4 nie jest rozwiązaniem
+W=-63760254503 W1=-1 x=5 nie jest rozwiązaniem
+W=-110177732996 W1=-2 x=6 nie jest rozwiązaniem
 Zadanie 7
-a=1 b=0 c=-44 p=13 q=4 r=5
+a=71 b=3 c=75 p=7 q=11 r=4
+Rozwiązanie: M=308 M1=44 M2=28 M3=77 x1=3 x2=3 x3=2 x=21174 x4=230
 Zadanie 8
- x=9 Y=19 a=-8 b=3 c=-16 d=1 e=24 f=-16 k=40 n=39 k1=1
+ x=5 Y=11 a=7 b=-4 c=-16 d=9 e=6 f=-9 k=-1 n=15 k1=14
+Rozwiązanie a1=7 b1=-4 c1=-1 d1=9 e1=6 f1=-9 k=-1 k1=14 x=5 Y=11
 Zadanie 9
-phi=3360 n=5075 p=5 q=7 r=29
+phi=7560 n=7525 p=5 q=7 r=43
 Zadanie 10
-Phi=1056 n=22325 p=5 q=19 r47 K1=243 K2=58 k=257606 wynik=12028
+Phi=30720 n=8432 p=4 q=17 r31 K1=711 K2=81 k=21872559 wynik=91
+ binary K=1010011011011111110101111 kolumna F=3
+ binary K=101001101101111111010111 kolumna F=9
+ binary K=10100110110111111101011 kolumna F=81
+ binary K=1010011011011111110101 kolumna F=6561
+ binary K=101001101101111111010 kolumna F=1361
+ binary K=10100110110111111101 kolumna F=5713
+ binary K=1010011011011111110 kolumna F=6529
+ binary K=101001101101111111 kolumna F=4081
+ binary K=10100110110111111 kolumna F=1361
+ binary K=1010011011011111 kolumna F=5713
+ binary K=101001101101111 kolumna F=6529
+ binary K=10100110110111 kolumna F=4081
+ binary K=1010011011011 kolumna F=1361
+ binary K=101001101101 kolumna F=5713
+ binary K=10100110110 kolumna F=6529
+ binary K=1010011011 kolumna F=4081
+ binary K=101001101 kolumna F=1361
+ binary K=10100110 kolumna F=5713
+ binary K=1010011 kolumna F=6529
+ binary K=101001 kolumna F=4081
+ binary K=10100 kolumna F=1361
+ binary K=1010 kolumna F=5713
+ binary K=101 kolumna F=6529
+ binary K=10 kolumna F=4081
+ binary K=1 kolumna F=1361
+ wynik=91
