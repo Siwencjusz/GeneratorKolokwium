@@ -100,5 +100,15 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.exe10
             solution += Environment.NewLine + " wynik=" + Result;
             return solution;
         }
+
+        public void ReGenerate()
+        {
+            GetNumbers();
+        }
+        public string ExerciseName
+        {
+            get { return "Zadanie 10"; }
+
+        }
     }
 }

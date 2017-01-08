@@ -90,5 +90,16 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex7
 
 
         }
+
+        public void ReGenerate()
+        {
+            GetNumbers();
+        }
+
+        public string ExerciseName
+        {
+            get { return "Zadanie 7"; }
+
+        }
     }
 }

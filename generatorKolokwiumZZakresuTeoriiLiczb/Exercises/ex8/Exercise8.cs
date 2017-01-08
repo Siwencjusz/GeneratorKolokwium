@@ -89,5 +89,16 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex8
             return "Zadanie 8" + Environment.NewLine + " x=" + X + " Y=" + Y + " a=" + A + " b=" + B + " c=" + C + " d=" + D + " e=" + E + " f=" + F + " k=" + K + " n=" + N + " k1=" + K1+ Environment.NewLine+
                 "Rozwiązanie a1="+A1+ " b1="+ B1+ " c1="+ C1+ " d1="+ D1+ " e1="+ E1+ " f1="+ F1 + " k="+K+ " k1="+K1+ " x="+X+ " Y="+ Y;
         }
+
+        public void ReGenerate()
+        {
+            GetNumbers();
+        }
+
+        public string ExerciseName
+        {
+            get { return "Zadanie 8"; }
+
+        }
     }            //Odpowiedź: wypisać a1 = a mod n i podobnie b1,c1,d1,e1,f1.Wypisać k oraz k1 i x, y.
 }

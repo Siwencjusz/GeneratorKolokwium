@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<latex ochem="false" utf8="true">
+  <dev papersize="a4"
+  dpi="600"
+  pdfwrite="UTF-8"
+  utf8="true"
+  >pdfwrite</dev>
+  <src>
+    <![CDATA[\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+
+    \usepackage{amsmath}
+    \usepackage[french,german,polish,english]{babel}
+\usepackage{polski}
+\usepackage[LY1]{fontenc}
+ 
+
+
+\DeclareTextCompositeCommand{\k}{LY1}{a}
+  {\oalign{a\crcr\noalign{\kern-.27ex}\hidewidth\char7}}
+\DeclareTextCompositeCommand{\k}{LY1}{e}
+  {\oalign{e\crcr\noalign{\kern-.27ex}\hidewidth\char7\hidewidth}}
+\DeclareTextCompositeCommand{\k}{LY1}{E}
+  {\oalign{E\crcr\hidewidth\char7\hidewidth}}
+
+    \selectlanguage{polish}
+\fontfamily{<phv>}\selectfont
+\renewcommand{\sfdefault}{ptm}
+%	options include 12pt or 11pt or 10pt
+%	classes include article, report, book, letter, thesis
+
+\title{Kolokwium Teoria Liczb}
+\author{Adam Ra\'s}
+\date{29 February 2004}
+
+\begin{document}
+
+\maketitle
+
+1.	Sformułować i udowodnić cechę podzielności przez  a) 9 w systemie dziesi\k{a}tkowym   
+b) 4 w systemie siedemnastkowym  
+c)8 w systemie szesnastkowym  
+d) sprawdzi\'c, czy  liczba $DA954AC02DB75B_{17}$  jest podzielna przez  4.
+
+2.	Obliczy\'c  $NWW(NWD(x_{p},y_{q}),z)$, a następnie zapisać w systemie piątkowym.
+
+3.	Obliczyć $NWD(NWW(x_{p},y_{q}),z)$, a następnie zapisać w systemie piątkowym.
+
+4.	Rozwiązać  w liczbach całkowitych równania liniowe   
+a) 117x+182y=1386	
+b)42x+102y=12
+
+5.	Rozwi\k{a}za\'c kongruencje liniowe    
+a)$21x\equiv_{7}9$  
+b)$39x\equiv_{7}12$
+
+6.	Rozwiązać kongruencję   $x^{1939}+4x^{2}+3\equiv_{5}1$   wykorzystuj\k{a}c Małe Twierdzenie Fermata.
+
+7.	Rozwiązać układ kongruencji  
+$
+ \left\{ \begin{array}{ll}
+  x\equiv_{5}1& \\
+x\equiv_{5}1& \\
+x\equiv_{5}1&
+\end{array} \right.
+$
+
+8.	Rozwiązać układ kongruencji   
+$
+ \left\{ \begin{array}{ll}
+  2x+ 5y\equiv_{5}1& \\
+3x+ 6y\equiv_{5}1& 
+\end{array} \right.
+$
+
+9.	Wyznaczyć wartość funkcji Eulera $\varphi$(363)
+
+10.	Obliczyć $3^{1939}mod362$ wykorzystując Twierdzenie Eulera a następnie algorytm szybkiego potęgowania modulo.
+\end{document}
+    
+
+    
+    
+    ]]>
+  </src>
+  <embeddedData>true</embeddedData>
+</latex>

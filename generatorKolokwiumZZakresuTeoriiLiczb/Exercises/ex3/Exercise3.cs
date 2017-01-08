@@ -63,6 +63,14 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania
             return  new List<int>() {x,y,c};
         }
 
+        public void ReGenerate()
+        {
+            GetNumbers();
+        }
+        public string ExerciseName
+        {
+            get { return "Zadanie 3"; }
 
+        }
     }
 }

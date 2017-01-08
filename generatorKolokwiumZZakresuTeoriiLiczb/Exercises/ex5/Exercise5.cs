@@ -64,9 +64,20 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises
         public int Modulo { get; private set; }
         public int a2 {get; set;}
 
+        public void ReGenerate()
+        {
+            GetNumbers();
+        }
+
         public string GetOutput()
         {
             return "Zadanie 5" + Environment.NewLine + "a=" + A + " b=" + B + " x=" + X + " a2="+a2+" c2="+c2+" x2="+ x2;
+        }
+
+        public string ExerciseName
+        {
+            get { return "Zadanie 5"; }
+
         }
     }
 }

@@ -6,25 +6,23 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises
 {
     public static class MathService
     {
-        public static Random Stamp = new Random();
+        public static Random Stamp = new Random(DateTime.Now.Millisecond);
         public static string BaseNumbers = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         private static char[] baseNumbers = BaseNumbers.ToCharArray();
         public static string IntToString(int value, int sysBase)
         {
           
             string result = string.Empty;
-            char[] baseChars = baseNumbers.Take(sysBase).ToArray();
-            int targetBase = baseChars.Length;
-
             do
             {
                 string toAdd = string.Empty;
                 if (value>0)
                 {
-                    var index = value % targetBase;
-                    toAdd = baseChars[index].ToString();
-                    result = toAdd + result;
-                    value = value / targetBase;
+                    var index = value % sysBase;
+                    //toAdd = baseChars[index].ToString();
+                    toAdd = BaseNumbers.Substring(index, 1);
+                    result = result.Insert(0,toAdd);
+                    value = value / sysBase;
                 }
             }
             while (value > 0);
@@ -132,13 +130,14 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises
             return result;
         }
 
-        public static bool IsNumberHas3Divisors(int number, int numberOfDivisors)
+        public static bool IsNumberHasXDivisors(int number, int numberOfDivisors)
         {
             List<int> listofDivisors=new List<int>();
+            var listLength = 0; 
             listofDivisors.Clear();
             do
             {
-                var listLength = listofDivisors.Count;
+                listLength = listofDivisors.Count;
                 if (listLength== numberOfDivisors)
                 {
                     return true;

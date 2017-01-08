@@ -41,9 +41,19 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex9
         public int Q { get; set; }
 
         public int R { get; set; }
+        public void ReGenerate()
+        {
+            GetNumbers();
+        }
+
         public string GetOutput()
         {
             return "Zadanie 9" + Environment.NewLine +"phi="+Phi+ " n=" + N + " p=" + P + " q=" + Q + " r=" + R;
         }//Odpowiedź: wypisać p, q, r oraz φ(n)=p*(p-1)*(q-1)*(r-1). 
+        public string ExerciseName
+        {
+            get { return "Zadanie 9"; }
+
+        }
     }
 }

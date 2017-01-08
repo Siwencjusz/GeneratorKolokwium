@@ -64,6 +64,16 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania.ex4
                    Environment.NewLine +
                    "B)  a=" + PartB.a + " b=" + PartB.b + " c=" + PartB.c + "x=" + PartB.x + " y=" + PartB.y + " a2=" + PartB.a2 + " c2="+ PartB.c2+" brak rozwiązania";
         }
+
+        public void ReGenerate()
+        {
+            GetNumbers();
+        }
+        public string ExerciseName
+        {
+            get { return "Zadanie 4"; }
+
+        }
     }
 }
 //Odpowiedź: a) d=NWD(a, b), a1=a/d, b1=b/d, c1=c/d, x, y oraz

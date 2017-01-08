@@ -1,56 +1,53 @@
 Zadanie 1
-A) 11 B) p=16 x=5C) q=18 y=3 D) ECB60EA2Czy podzielna przez x=5 Czy podzielna: False suma cyfr: 69
+A) 11 B) p=13 x=3C) q=14 y=7 D) 67C731CACzy podzielna przez x=3 Czy podzielna: False suma cyfr: 58
 Zadanie 2 
-P=16 x1=2480x w sytemie P 9B0 q=3 y1=150y w sytemie P 12120 Największy współny dzielnik=10 Najmniejszy wspólns wielokrotność=2480
+P=12 x1=1569x w sytemie P AA9 q=5 y1=3096y w sytemie P 44341 Największy współny dzielnik=3 Najmniejszy wspólns wielokrotność=1569
 Zadanie 3
-A) a=2 b=6 c=70x=8 y=9 a1=1 b1=3 c1=35 d=NWD(a,b)=2
-B)  a=26 b=66 c=803x=8 y=9 Brak rozwiązania
+A) a=35 b=30 c=515x=7 y=9 a1=7 b1=6 c1=103 d=NWD(a,b)=5
+B)  a=10 b=55 c=566x=7 y=9 Brak rozwiązania
 Zadanie 4 
-A) a=40 b=10 c=410 x=8 y=9 a1=4 b1=1 c1=41 d=NWD(a,b)=10 a2=0 c2=0 x2=8
-B)  a=96 b=15 c=667x=6 y=6 a2=6 c2=7 brak rozwiązania
+A) a=24 b=16 c=408 x=11 y=9 a1=3 b1=2 c1=51 d=NWD(a,b)=8 a2=8 c2=8 x2=11
+B)  a=62 b=16 c=827x=11 y=9 a2=14 c2=11 brak rozwiązania
 Zadanie 5
-a=103 b=106 x=35 a2=103 c2=1 x2=0
+a=96 b=661 x=241 a2=96 c2=1 x2=0
 Zadanie 6
-a=-800 b=42 c=412 d=-788e=-272 n=28071 k=4678 p=7
-W=-510081011 W1=-6 x=1 jest rozwiązaniem
-W=-4080652100 W1=0 x=2 nie jest rozwiązaniem
-W=-13772208449 W1=-6 x=3 jest rozwiązaniem
-W=-32645244452 W1=-2 x=4 nie jest rozwiązaniem
-W=-63760254503 W1=-1 x=5 nie jest rozwiązaniem
-W=-110177732996 W1=-2 x=6 nie jest rozwiązaniem
+a=460 b=899 c=114 d=-738e=-697 n=44229 k=7371 p=7
+W=98779758 W1=0 x=1 nie jest rozwiązaniem
+W=787009742 W1=1 x=2 nie jest rozwiązaniem
+W=2652522300 W1=1 x=3 nie jest rozwiązaniem
+W=6283150518 W1=1 x=4 nie jest rozwiązaniem
+W=12266727482 W1=2 x=5 nie jest rozwiązaniem
+W=21191086278 W1=5 x=6 nie jest rozwiązaniem
 Zadanie 7
-a=71 b=3 c=75 p=7 q=11 r=4
-Rozwiązanie: M=308 M1=44 M2=28 M3=77 x1=3 x2=3 x3=2 x=21174 x4=230
+a=57 b=82 c=-76 p=11 q=4 r=7
+Rozwiązanie: M=308 M1=28 M2=77 M3=44 x1=3 x2=2 x3=3 x=7384 x4=300
 Zadanie 8
- x=5 Y=11 a=7 b=-4 c=-16 d=9 e=6 f=-9 k=-1 n=15 k1=14
-Rozwiązanie a1=7 b1=-4 c1=-1 d1=9 e1=6 f1=-9 k=-1 k1=14 x=5 Y=11
+ x=9 Y=13 a=0 b=14 c=-2 d=-14 e=199 f=7 k=28 n=17 k1=11
+Rozwiązanie a1=0 b1=14 c1=-2 d1=-14 e1=12 f1=7 k=28 k1=11 x=9 Y=13
 Zadanie 9
-phi=7560 n=7525 p=5 q=7 r=43
+phi=11000 n=6325 p=5 q=11 r=23
 Zadanie 10
-Phi=30720 n=8432 p=4 q=17 r31 K1=711 K2=81 k=21872559 wynik=91
- binary K=1010011011011111110101111 kolumna F=3
- binary K=101001101101111111010111 kolumna F=9
- binary K=10100110110111111101011 kolumna F=81
- binary K=1010011011011111110101 kolumna F=6561
- binary K=101001101101111111010 kolumna F=1361
- binary K=10100110110111111101 kolumna F=5713
- binary K=1010011011011111110 kolumna F=6529
- binary K=101001101101111111 kolumna F=4081
- binary K=10100110110111111 kolumna F=1361
- binary K=1010011011011111 kolumna F=5713
- binary K=101001101101111 kolumna F=6529
- binary K=10100110110111 kolumna F=4081
- binary K=1010011011011 kolumna F=1361
- binary K=101001101101 kolumna F=5713
- binary K=10100110110 kolumna F=6529
- binary K=1010011011 kolumna F=4081
- binary K=101001101 kolumna F=1361
- binary K=10100110 kolumna F=5713
- binary K=1010011 kolumna F=6529
- binary K=101001 kolumna F=4081
- binary K=10100 kolumna F=1361
- binary K=1010 kolumna F=5713
- binary K=101 kolumna F=6529
- binary K=10 kolumna F=4081
- binary K=1 kolumna F=1361
- wynik=91
+Phi=68040 n=20425 p=5 q=19 r43 K1=39 K2=63 K=2721537 wynik=14232
+ binary K=1010011000011100000001 kolumna F=7
+ binary K=101001100001110000000 kolumna F=49
+ binary K=10100110000111000000 kolumna F=2401
+ binary K=1010011000011100000 kolumna F=4951
+ binary K=101001100001110000 kolumna F=2401
+ binary K=10100110000111000 kolumna F=4951
+ binary K=1010011000011100 kolumna F=2401
+ binary K=101001100001110 kolumna F=4951
+ binary K=10100110000111 kolumna F=2401
+ binary K=1010011000011 kolumna F=4951
+ binary K=101001100001 kolumna F=2401
+ binary K=10100110000 kolumna F=4951
+ binary K=1010011000 kolumna F=2401
+ binary K=101001100 kolumna F=4951
+ binary K=10100110 kolumna F=2401
+ binary K=1010011 kolumna F=4951
+ binary K=101001 kolumna F=2401
+ binary K=10100 kolumna F=4951
+ binary K=1010 kolumna F=2401
+ binary K=101 kolumna F=4951
+ binary K=10 kolumna F=2401
+ binary K=1 kolumna F=4951
+ wynik=14232

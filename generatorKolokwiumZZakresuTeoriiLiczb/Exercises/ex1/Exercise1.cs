@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Novacode;
 
 namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex1
 {
@@ -22,6 +23,13 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex1
         public string Number { get; set; }
         public int DataDNumberSum { get; set; }
         public bool IsDividable { get; set; }
+
+        public string ExerciseName
+        {
+            get { return "Zadanie 1"; }
+
+        }
+
         private void GetNumbers()
         {
             bool random = MathService.Stamp.Next(0, 2) != 0;
@@ -31,14 +39,6 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex1
             GetPartD();
 
         }
-
-        public string GetOutput()
-        {
-            return "Zadanie 1"+ Environment.NewLine+ 
-                "A) " + DataA + " B) p=" + P + " x=" + DataBDivior + "C) q="+Q+" y="+Y +" D) "+ Number + "Czy podzielna przez x="+ DataBDivior+" Czy podzielna: " + IsDividable +" suma cyfr: "+ DataDNumberSum;
-        }
-        
-
         private void GetPartA(bool random)
         {
             DataA = random ? 9 : 11;
@@ -119,6 +119,32 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex1
             //IsDividable = decimalValue % DataBDivior==0;
         }
 
-        
+        public string GetOutput()
+        {
+            string isdividable;
+            isdividable = IsDividable ? "Tak" : "Nie";
+            return "Zadanie 1" + Environment.NewLine +
+                "A) " + DataA + Environment.NewLine +
+                " B) p=" + P + " x=" + DataBDivior + Environment.NewLine +
+                " C) q=" + Q + " y=" + Y + Environment.NewLine +
+                " D)  Czy w systemie P=" + P+ " Liczba " + Number + " jest podzielna przez x=" + DataBDivior + " Czy podzielna: " + isdividable + " suma cyfr: " + DataDNumberSum+ Environment.NewLine;
+        }
+
+        public void ReGenerate()
+        {
+            bool random = MathService.Stamp.Next(0, 2) != 0;
+            GetPartA(random);
+            GetPartB(random);
+            GetPartC();
+            GetPartD();
+        }
+        //public Paragraph ExerciseText()
+        //{
+        //    string paraOne = "";
+        //    var paraFormat = new Formatting();
+        //    paraFormat.FontFamily = new System.Drawing.FontFamily("Times New Roman");
+        //    paraFormat.Size = 12D;
+        //    return new Paragraph(paraOne,);
+        //}
     }
 }

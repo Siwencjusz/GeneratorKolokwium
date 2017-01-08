@@ -19,15 +19,57 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania
             GetNumbers();
         }
 
+        private bool option = false;
         private void GetNumbers()
         {
             GetX();
-            GetY();
-            Z = MathService.Stamp.Next(10, 100);
-            LCM = MathService.FindLeastCommonMultpile(X1, X1);
+            option = 50<MathService.Stamp.Next(0, 100);
+            if (option)
+            {
+                GetY();
+
+                Z = MathService.Stamp.Next(10, 100);
+                LCM = MathService.FindLeastCommonMultpile(X1, Y1);
+            }
+            else
+            {
+                GetY1();
+                Z = MathService.Stamp.Next(10, 100);
+                GCD = MathService.GetGreatestCommonDivisor(X1, Y1);
+            }
+        }
+        public string ExerciseName
+        {
+            get { return "Zadanie 2"; }
+
+        }
+        private void GetY1()
+        {
+            bool divisorLength;
+            bool divisorCondition;
+            var counter = 0;
+            do
+            {
+                if (counter == 20)
+                {
+                    break;
+                }
+                Q = MathService.Stamp.Next(3, 6);
+                var min = Convert.ToInt32(Math.Pow(Q, 4));
+                var max = Convert.ToInt32(Math.Pow(Q, 5));
+                Y1 = MathService.Stamp.Next(min, max);
+                Y = MathService.IntToString(Y1, Q);
+                LCM = MathService.FindLeastCommonMultpile(X1, Y1);
+                divisorCondition = LCM != 1;
+                divisorLength = MathService.IsNumberHasXDivisors(Y1, 3);
+                counter++;
+            } while (!(divisorCondition && divisorLength));
+            if (counter == 20)
+            {
+                GetY1();
+            }
         }
 
-        
 
         private void GetY()
         {
@@ -47,7 +89,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania
                 Y = MathService.IntToString(Y1, Q);
                 GCD = MathService.GetGreatestCommonDivisor(X1, Y1);
                 divisorCondition = GCD != 1;
-                divisorLength = MathService.IsNumberHas3Divisors(Y1,3);
+                divisorLength = MathService.IsNumberHasXDivisors(Y1,3);
                 counter++;
             } while (!(divisorCondition && divisorLength));
             if (counter==20)
@@ -83,9 +125,23 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania
 
         public string GetOutput()
         {
-            return "Zadanie 2 " + Environment.NewLine+
-            "P=" + P + " x1=" + X1 + "x w sytemie P " + X + " q=" + Q + " y1=" + Y1 + "y w sytemie P " + Y +
-                   " Największy współny dzielnik=" + GCD + " Najmniejszy wspólns wielokrotność=" + LCM;
+            string optionText;
+            if (option)
+            {
+                optionText = "NWW(NWD";
+            }
+            else
+            {
+                optionText = "NWD(NWW";
+            }
+            return "Zadanie 2  option="+ option + Environment.NewLine+
+            "P=" + P + " x1=" + X1 + " x w systemie P x=" + X + " q=" + Q + " y1=" + Y1 + " w systemie P  y=" + Y +
+                   " największy wspólny dzielnik x1 i y1=" + GCD + " najmniejsza wspólna wielokrotność x1 i y1=" + LCM;
+        }
+
+        public void ReGenerate()
+        {
+            GetNumbers();
         }
     }
 }
