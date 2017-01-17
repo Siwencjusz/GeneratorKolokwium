@@ -30,7 +30,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania
             return "Zadanie 3" + Environment.NewLine + "A) a=" + PartA.a + " b=" + PartA.b + " c=" + PartA.c + "x=" +
                    PartA.x + " y=" + PartA.y + " a1=" + PartA.a1 + " b1="+ PartA.b1 + " c1="+ PartA.c1 + " d=NWD(a,b)="+ PartA.d+
 
-                   Environment.NewLine +"B)  a=" + PartB.a + " b=" + PartB.b + " c=" + PartB.c + "x=" + PartB.x + " y=" + PartB.y+ " Brak rozwiązania";
+                   Environment.NewLine +"B)  a=" + PartB.a + " b=" + PartB.b + " c=" + PartB.c + " x=" + PartB.x + " y=" + PartB.y+ " Brak rozwiązania" + Environment.NewLine;
         }
         public static string ExerciseText = "Rozwiązać w liczbach całkowitych równania liniowe";
         public EquasionData PartA;
@@ -67,6 +67,18 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania
         {
             GetNumbers();
         }
+
+        public string GetXML()
+        {
+            var XML = "\\item Rozwiązać  w liczbach całkowitych równania liniowe" + Environment.NewLine +
+                      "\\begin{enumerate}" + Environment.NewLine +
+                      "\\pagestyle{empty} " + Environment.NewLine +
+                      "\\item[a)] "+PartA.a+"x+"+PartA.b+"y="+PartA.c + Environment.NewLine +
+                      "\\item[b)] "+PartB.a+"x+"+PartB.b+"y="+PartB.c+ Environment.NewLine +
+                      "\\end{enumerate}" + Environment.NewLine;
+            return XML;
+        }
+
         public string ExerciseName
         {
             get { return "Zadanie 3"; }

@@ -135,10 +135,23 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania
                 optionText = "NWD(NWW";
             }
             return "Zadanie 2  option="+ option + Environment.NewLine+
-            "P=" + P + " x1=" + X1 + " x w systemie P x=" + X + " q=" + Q + " y1=" + Y1 + " w systemie P  y=" + Y +
-                   " największy wspólny dzielnik x1 i y1=" + GCD + " najmniejsza wspólna wielokrotność x1 i y1=" + LCM;
+            "P=" + P + " x1=" + X1 + " x w systemie P x=" + X + " q=" + Q + " y1=" + Y1 + " w systemie P  y=" + Y + " z="+ Z+
+                   " największy wspólny dzielnik x1 i y1=" + GCD + " najmniejsza wspólna wielokrotność x1 i y1=" + LCM + Environment.NewLine;
         }
-
+        public string GetXML()
+        {
+            var XML = "";
+            if (option)
+            {
+                XML += "\\item Obliczyć  $NWW(NWD("+X+"_{"+P+"},"+Y+"_{"+Q+"}),"+Z+")$, a następnie zapisać w systemie piątkowym."+ Environment.NewLine;
+            }
+            else
+            {
+                XML+= "\\item Obliczyć $NWD(NWW("+X+"_{ "+P+"},"+Y+"_{ "+Q+"}),"+Z+")$, a następnie zapisać w systemie piątkowym." +
+                    Environment.NewLine;
+            }
+            return XML;
+        }
         public void ReGenerate()
         {
             GetNumbers();

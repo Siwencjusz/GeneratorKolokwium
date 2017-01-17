@@ -62,13 +62,22 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Zadania.ex4
 
 
                    Environment.NewLine +
-                   "B)  a=" + PartB.a + " b=" + PartB.b + " c=" + PartB.c + "x=" + PartB.x + " y=" + PartB.y + " a2=" + PartB.a2 + " c2="+ PartB.c2+" brak rozwiązania";
+                   "B)  a=" + PartB.a + " b=" + PartB.b + " c=" + PartB.c + "x=" + PartB.x + " y=" + PartB.y + " a2=" + PartB.a2 + " c2="+ PartB.c2+" brak rozwiązania" + Environment.NewLine;
         }
 
         public void ReGenerate()
         {
             GetNumbers();
         }
+
+        public string GetXML()
+        {
+            var XML = "\\item Rozwiązać kongruencje liniowe" + Environment.NewLine +
+                      "a)$"+PartA.a+"x\\equiv_{ "+PartA.b+"}"+PartA.c+"$" + Environment.NewLine +
+                      "b)$"+PartB.b+"x\\equiv_{ "+PartB.b+"}"+PartB.c+"$" + Environment.NewLine;
+            return XML;
+        }
+
         public string ExerciseName
         {
             get { return "Zadanie 4"; }

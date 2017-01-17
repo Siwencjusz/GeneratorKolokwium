@@ -39,7 +39,8 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex6
             e1 = E%P;
             for (int i = 1; i < P; i++)
             {
-                var w = Math.Pow((A + 1)*i, 3) + Math.Pow(B*i, 2) + C*i + D;
+                  
+                var w = (A + 1) * Math.Pow(i, 3) + B * Math.Pow(i, 2) + C*i + D;
                 var w1 = w%P;
                 var row = "W=" + w + " W1=" + w1;
                 if (w1==e1)
@@ -75,13 +76,21 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex6
             {
                 solution=solution + Environment.NewLine + w;
             }
-            return solution;
+            return solution + Environment.NewLine;
         }
 
         public void ReGenerate()
         {
             GetNumbers();
         }
+
+        public string GetXML()
+        {
+            var   XML=
+            "\\item Rozwiązać kongruencję   $x ^{ "+A+"}+"+B+"x ^{ 2}+"+C+"\\equiv_{ "+P+"}"+E+"$   wykorzystuj\\k{ a}c Małe Twierdzenie Fermata."+Environment.NewLine;
+            return XML;
+        }
+
         public string ExerciseName
         {
             get { return "Zadanie 6"; }

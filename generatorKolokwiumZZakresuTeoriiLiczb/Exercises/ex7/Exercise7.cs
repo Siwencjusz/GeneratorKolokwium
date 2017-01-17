@@ -86,7 +86,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex7
         {
             return "Zadanie 7" + Environment.NewLine + "a=" + A + " b=" + B + " c=" + C + " p=" + P + " q=" + Q + " r=" +
                    R+ Environment.NewLine
-                   +"Rozwiązanie: M="+M+ " M1="+M1 + " M2="+ M2+ " M3="+ M3 + " x1="+X1+ " x2="+X2+ " x3="+X3+ " x="+X + " x4="+ X4;
+                   +"Rozwiązanie: M="+M+ " M1="+M1 + " M2="+ M2+ " M3="+ M3 + " x1="+X1+ " x2="+X2+ " x3="+X3+ " x="+X + " x4="+ X4 + Environment.NewLine;
 
 
         }
@@ -100,6 +100,17 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex7
         {
             get { return "Zadanie 7"; }
 
+        }
+
+        public string GetXML()
+        {
+            var XML="\\item Rozwiązać układ kongruencji"+  Environment.NewLine+
+                    "$\\left\\{ \\begin{array}{ll}"+  Environment.NewLine+
+                    "x\\equiv_{"+P+"}"+A+"& \\\\"+  Environment.NewLine+
+                    "x\\equiv_{"+Q+"}"+B+"& \\\\"+  Environment.NewLine+
+                    "x\\equiv_{"+R+"}"+C+"& "+  Environment.NewLine+
+                    "\\end{array} \\right.$"+  Environment.NewLine;
+            return XML;
         }
     }
 }

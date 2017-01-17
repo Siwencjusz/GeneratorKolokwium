@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<latex ochem="false" utf8="true">
+  <dev papersize="a4"
+  dpi="600"
+  pdfwrite="UTF-8"
+  utf8="true"
+  >pdfwrite</dev>
+  <src>
+    <![CDATA[\documentclass[a4paper,12pt]{memoir}
+\usepackage{etoolbox}
+\pagestyle{empty}
+\usepackage[utf8]{inputenc}
+
+    \usepackage{amsmath}
+    \usepackage[french,german,polish,english]{babel}
+\usepackage{polski}
+\DeclareTextCompositeCommand{\k}{LY1}{a}
+  {\oalign{a\crcr\noalign{\kern-.27ex}\hidewidth\char7}}
+\DeclareTextCompositeCommand{\k}{LY1}{e}
+  {\oalign{e\crcr\noalign{\kern-.27ex}\hidewidth\char7\hidewidth}}
+\DeclareTextCompositeCommand{\k}{LY1}{E}
+  {\oalign{E\crcr\hidewidth\char7\hidewidth}}
+
+
+
+    \selectlanguage{polish}
+\usepackage{lmodern}
+\usepackage[LGR,T1]{fontenc}
+
+%	options include 12pt or 11pt or 10pt
+%	classes include article, report, book, letter, thesis
+\usepackage{datetime}
+\newdateformat{specialdate}{\THEYEAR-\twodigit{\THEMONTH}-\twodigit{\THEDAY}}
+\pagestyle{empty}
+\setlength{\droptitle}{-15pt}     % Eliminate the default vertical space
+%\addtolength{\droptitle}{-11pt}
+\title{{\huge Kolokwium Teoria Liczb}}
+\date{\specialdate\today}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 1.2ex minus 1.2ex}
+\begin{enumerate}

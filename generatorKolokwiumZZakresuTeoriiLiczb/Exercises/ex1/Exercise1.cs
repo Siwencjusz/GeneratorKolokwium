@@ -127,9 +127,20 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex1
                 "A) " + DataA + Environment.NewLine +
                 " B) p=" + P + " x=" + DataBDivior + Environment.NewLine +
                 " C) q=" + Q + " y=" + Y + Environment.NewLine +
-                " D)  Czy w systemie P=" + P+ " Liczba " + Number + " jest podzielna przez x=" + DataBDivior + " Czy podzielna: " + isdividable + " suma cyfr: " + DataDNumberSum+ Environment.NewLine;
+                " D)  Czy w systemie P=" + P+ " Liczba " + Number + " jest podzielna przez x=" + DataBDivior + Environment.NewLine+ " Czy podzielna: " + isdividable + Environment.NewLine + " suma cyfr: " + DataDNumberSum+ Environment.NewLine;
         }
 
+        public string GetXML()
+        {
+            var XML = "\\item Sformułować i udowodnić cechę podzielności przez" + Environment.NewLine +
+                      "\\begin{ enumerate} " + Environment.NewLine +
+                      "\\item[a)] " + DataA +" w systemie dziesiątkowym " + Environment.NewLine +
+                      "\\item[b)]4 w systemie siedemnastkowym " + Environment.NewLine +
+                      "\\item[c)]8 w systemie szesnastkowym" + Environment.NewLine +
+                      "\\item[d)]sprawdzić, czy liczba $DA954AC02DB75B_{ 17}$ jest podzielna przez 4" +Environment.NewLine +
+                      "\\end{ enumerate}" + Environment.NewLine;
+            return XML;
+        }
         public void ReGenerate()
         {
             bool random = MathService.Stamp.Next(0, 2) != 0;

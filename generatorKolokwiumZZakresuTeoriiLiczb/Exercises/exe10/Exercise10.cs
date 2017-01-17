@@ -20,7 +20,11 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.exe10
         private void GetNumbers()
         {
 
-            P = MathService.GetPrimeNumber(5, 2);
+            do
+            {
+                P = MathService.GetPrimeNumber(5, 2);
+            } while (P==4);
+            
             Q = MathService.GetPrimeNumber(23, 7);
             do
             {
@@ -28,7 +32,8 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.exe10
             } while (Q == R);
             N = P * P * Q * R;
             var argument = (P - 1) * (Q - 1) * (R - 1);
-            Phi = P * (Q - 1) * (Q - 1) * (R - 1);
+            Phi = MathService.PHI(N);
+            //Phi = P * (Q - 1) * (Q - 1) * (R - 1);
             K1 = MathService.Stamp.Next(2, 1000);
             K2 = MathService.Stamp.Next(2, 100);
             A = MathService.Stamp.Next(1, 10);
@@ -40,6 +45,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.exe10
 
         private void GetFullSolution()
         {
+            BinaryK= new List<string>();
             var tmpK = K;
             DecimalK.Add(tmpK);
             StepsFirst.Add(A % N);
@@ -55,11 +61,15 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.exe10
                 StepsSecond.Add(StepsFirst.LastOrDefault() % N);
                 StepsThird.Add(tmpK % 2 == 1 ? StepsSecond.LastOrDefault() : 1);
 
-
                 tmpK = tmpK / 2;
+                if (tmpK==0)
+                {
+                    tmpK = -10;
+                    break;
+                }
             };
             StepsFourth.Add((StepsThird[0] * StepsThird[1]) % N);
-            for (int i = 2; i < StepsThird.Count; i++)
+            for (int i = 2; i < StepsThird.Count-1; i++)
             {
                 StepsFourth.Add((StepsFourth.LastOrDefault() * StepsThird[i]) % N);
             }
@@ -109,6 +119,12 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.exe10
         {
             get { return "Zadanie 10"; }
 
+        }
+
+        public string GetXML()
+        {
+            var XML="\\item Obliczyć $"+A+"^{"+K+"}mod"+N+"$ wykorzystując Twierdzenie Eulera a następnie algorytm szybkiego potęgowania modulo.";
+            return XML;
         }
     }
 }

@@ -6,18 +6,14 @@
   utf8="true"
   >pdfwrite</dev>
   <src>
-    <![CDATA[\documentclass[a4paper,12pt]{article}
-
+    <![CDATA[\documentclass[a4paper,12pt]{memoir}
+\usepackage{etoolbox}
+\pagestyle{empty}
 \usepackage[utf8]{inputenc}
-
 
     \usepackage{amsmath}
     \usepackage[french,german,polish,english]{babel}
 \usepackage{polski}
-\usepackage[LY1]{fontenc}
- 
-
-
 \DeclareTextCompositeCommand{\k}{LY1}{a}
   {\oalign{a\crcr\noalign{\kern-.27ex}\hidewidth\char7}}
 \DeclareTextCompositeCommand{\k}{LY1}{e}
@@ -25,40 +21,53 @@
 \DeclareTextCompositeCommand{\k}{LY1}{E}
   {\oalign{E\crcr\hidewidth\char7\hidewidth}}
 
+
+
     \selectlanguage{polish}
-\fontfamily{<phv>}\selectfont
-\renewcommand{\sfdefault}{ptm}
+\usepackage{lmodern}
+\usepackage[LGR,T1]{fontenc}
+
 %	options include 12pt or 11pt or 10pt
 %	classes include article, report, book, letter, thesis
-
-\title{Kolokwium Teoria Liczb}
-\author{Adam Ra\'s}
-\date{29 February 2004}
-
+\usepackage{datetime}
+\newdateformat{specialdate}{\THEYEAR-\twodigit{\THEMONTH}-\twodigit{\THEDAY}}
+\pagestyle{empty}
+\setlength{\droptitle}{-15pt}     % Eliminate the default vertical space
+%\addtolength{\droptitle}{-11pt}
+\title{{\huge Kolokwium Teoria Liczb}}
+\date{\specialdate\today}
 \begin{document}
-
 \maketitle
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 1.2ex minus 1.2ex}
+\begin{enumerate}
+\item Sformułować i udowodnić cechę podzielności przez 
+\begin{enumerate} 
+\item[a)]9 w systemie dziesi\k{a}tkowym   
+\item[b)]4 w systemie siedemnastkowym  
+\item[c)]8 w systemie szesnastkowym  
+\item[d)]sprawdzić, czy liczba $DA954AC02DB75B_{17}$ jest podzielna przez 4
+\end{enumerate}
 
-1.	Sformułować i udowodnić cechę podzielności przez  a) 9 w systemie dziesi\k{a}tkowym   
-b) 4 w systemie siedemnastkowym  
-c)8 w systemie szesnastkowym  
-d) sprawdzi\'c, czy  liczba $DA954AC02DB75B_{17}$  jest podzielna przez  4.
+\item Obliczyć  $NWW(NWD(x_{p},y_{q}),z)$, a następnie zapisać w systemie piątkowym.
 
-2.	Obliczy\'c  $NWW(NWD(x_{p},y_{q}),z)$, a następnie zapisać w systemie piątkowym.
+\item Obliczyć $NWD(NWW(x_{p},y_{q}),z)$, a następnie zapisać w systemie piątkowym.
 
-3.	Obliczyć $NWD(NWW(x_{p},y_{q}),z)$, a następnie zapisać w systemie piątkowym.
+\item Rozwiązać  w liczbach całkowitych równania liniowe   
+\begin{enumerate}
+\pagestyle{empty} 
+\item[a)] 117x+182y=1386	
+\item[b)]42x+102y=12
+\end{enumerate}
 
-4.	Rozwiązać  w liczbach całkowitych równania liniowe   
-a) 117x+182y=1386	
-b)42x+102y=12
-
-5.	Rozwi\k{a}za\'c kongruencje liniowe    
+\item Rozwiązać kongruencje liniowe    
 a)$21x\equiv_{7}9$  
 b)$39x\equiv_{7}12$
 
-6.	Rozwiązać kongruencję   $x^{1939}+4x^{2}+3\equiv_{5}1$   wykorzystuj\k{a}c Małe Twierdzenie Fermata.
+\item Rozwiązać kongruencję   $x^{1939}+4x^{2}+3\equiv_{5}1$   wykorzystuj\k{a}c Małe Twierdzenie Fermata.
 
-7.	Rozwiązać układ kongruencji  
+\item Rozwiązać układ kongruencji  
 $
  \left\{ \begin{array}{ll}
   x\equiv_{5}1& \\
@@ -67,7 +76,7 @@ x\equiv_{5}1&
 \end{array} \right.
 $
 
-8.	Rozwiązać układ kongruencji   
+\item Rozwiązać układ kongruencji   
 $
  \left\{ \begin{array}{ll}
   2x+ 5y\equiv_{5}1& \\
@@ -75,10 +84,16 @@ $
 \end{array} \right.
 $
 
-9.	Wyznaczyć wartość funkcji Eulera $\varphi$(363)
+\item Wyznaczyć wartość funkcji Eulera $\varphi$(363)
 
-10.	Obliczyć $3^{1939}mod362$ wykorzystując Twierdzenie Eulera a następnie algorytm szybkiego potęgowania modulo.
+\item Obliczyć $3^{1939}mod362$ wykorzystując Twierdzenie Eulera a następnie algorytm szybkiego potęgowania modulo.
+\end{enumerate}
 \end{document}
+    
+
+
+    
+
     
 
     

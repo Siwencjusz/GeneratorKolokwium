@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Data;
 using System.Drawing;
+using System.Reflection;
 using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography;
 using generatorKolokwiumZZakresuTeoriiLiczb.Exercises;
@@ -23,12 +24,14 @@ using generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex9;
 using generatorKolokwiumZZakresuTeoriiLiczb.Exercises.exe10;
 using generatorKolokwiumZZakresuTeoriiLiczb.Zadania;
 using generatorKolokwiumZZakresuTeoriiLiczb.Zadania.ex4;
+using iTextSharp.text.pdf;
 using Microsoft.Office.Interop.Word;
 
 namespace generatorKolokwiumZZakresuTeoriiLiczb
 {
     public partial class Generator : Form
     {
+
         public List<string> SelectedItems = new List<string>();
 
         public Generator()
@@ -42,7 +45,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb
 
         private void Generator_Load(object sender, EventArgs e)
         {
-
+            Generate.Enabled = false;
             Exercises = new List<IExercise>();
             ExercisesToPrint = new List<IExercise>();
             Exercise1 ex1 = new Exercise1();
@@ -130,7 +133,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb
 
             }
 
-            while (ExercisesToPrint.Count < 5)
+            /*while (ExercisesToPrint.Count < 5)
             {
                 var random = MathService.Stamp.Next(Exercises.Count);
                 if (ExercisesToPrint.All(x => x != Exercises[random]))
@@ -138,65 +141,50 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb
                     ExercisesToPrint.Add(Exercises[random]);
                     ExercisesList.SetItemCheckState(random, CheckState.Checked);
                 }
-            }
+            }*/
             if (fbd.SelectedPath == "" || fbd.SelectedPath == null)
             {
                 fbd.SelectedPath = path;
             }
-            //WordGenereator word = new WordGenereator(fbd.SelectedPath, ExercisesToPrint);
-            //word.CreateDoc();
+            //var content = XMLGenereator.BeginofXMl.ToString()+XMLGenereator.BeginOfTex.ToString();
+            var content = "";
+            foreach (var exercise in ExercisesToPrint)
+            {
+                content += exercise.GetXML();
+            }
+            //content += XMLGenereator.EndOFTex.ToString() + XMLGenereator.EndOFXML.ToString();
+            //File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory+"XMLData.xml", content, Encoding.UTF8);
+            WordGenereator word = new WordGenereator(fbd.SelectedPath, ExercisesToPrint);
+            word.CreateDoc();
 
-            var xml =
-                System.IO.File.ReadAllText(
-                    "C:\\Users\\Atencjusz\\Documents\\Visual Studio 2015\\Projects\\GeneratorKolokwium\\generatorKolokwiumZZakresuTeoriiLiczb\\XMLFile1.xml");
-
-
-
-//            xml = "<?xml version=\"1.0\" encoding=\"UTF - 8\"?>"+
-//  "< latex ochem = \"false\" utf8 = \"true\" > "+
-
-//   "    < dev papersize = \"a4\""+
-//  "dpi = \"600\""+
-//  "pdfwrite = \"UTF-8\""+
-//  "utf8 = \"true\""+
-//  "> pdfwrite </ dev > " +
-//  "< src > " +
-//   " < ![CDATA[\\documentclass[12pt]{ article}" +
-//    "        \\usepackage{ amsmath}" +
-//     "       \\usepackage[french, german, polish]{ babel}" +
-//    "\\selectlanguage{ polish}" +
-//"% options include 12pt or 11pt or 10pt" +
-//"% classes include article, report, book, letter, thesis" +
-
-//"\\title{ Kolokwium Teoria Liczb}" +
-//"\\author{"+
-// "               Adam Ra\\'s}" +
-
-//"\\begin{ document}" +
-//"\\maketitle" +
-// "co\'s nie dzia\\l{}a" +
-//"This is the content of this document." +
-
-//"This is the 2nd paragraph." +
-//"1.Sformułować i udowodnić cechę podzielności przez a) 9 w systemie dziesiątkowym b) 4 w systemie siedemnastkowym c)8 w systemie szesnastkowym d) sprawdzić, czy  $DA954AC02DB75B_{ 17}$ liczba DA954AC02DB75B17  jest podzielna przez  4." +
-//"\\begin{ verbatim}" +
-//"$x_{ ni}$ or ${ x_n}" +
-//                "_i$ or $x_{ n_i}$?" +
-//"\\end{ verbatim}" +
-//"$x_{ ni}$ or ${ x_n}" +
-// "               _i$ or $x_{ n_i}$?" +
-//"\\end{ document}" +
-// "               And appearing immediately below" +
-//"is a displayed formula:" +
-//"$$  V = \\frac{ 4 \\pi r^ 3}" +
-// "0               { 3}  $$" +
-//"\\end{ document}" +
+            System.IO.StreamWriter latex =
+                new System.IO.StreamWriter(fbd.SelectedPath + "\\latexCode.doc");
+            latex.WriteLine(content);
+            latex.Close();
 
 
-//"    ]]> " +
-// " </ src > " +
-//  "< embeddedData > true </ embeddedData > " +
-//"</ latex > ";
+
+            var xml = "";
+            //System.IO.File.ReadAllText(
+            //    "C:\\Users\\Atencjusz\\Documents\\Visual Studio 2015\\Projects\\GeneratorKolokwium\\generatorKolokwiumZZakresuTeoriiLiczb\\XMLFile1.xml");
+            //System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "XMLData.xml");
+
+            string fileName = "Begin.xml";
+            string filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Begin.xml");
+            xml =
+                System.IO.File.ReadAllText(filePath);
+            xml += content;
+            fileName = "End.xml";
+            filePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"End.xml");
+            xml += System.IO.File.ReadAllText(filePath);
+
+
+
+
+            try
+            {
+
+            
             string responsetext = null;
 
             HttpWebRequest request = (HttpWebRequest) WebRequest.Create("http://sciencesoft.at/latex");
@@ -244,7 +232,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb
 
 
                     System.IO.FileStream stream =
-                    new FileStream(path + "\\file.pdf", FileMode.Create);
+                    new FileStream(fbd.SelectedPath + "\\Zadania.pdf", FileMode.Create);
                     //try
                     //{
 
@@ -267,8 +255,15 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb
                 }
 
             }
-        }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Problem z WebApi Latex", "Błąd połączenia",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+        }
+        
       //// Prepare HTTP put
 
         //    request.ContentType = "application/x-www-form-urlencoded; charset=UTF-8";
@@ -280,18 +275,28 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bool removingAllowed = true;
-            if (ExercisesList.CheckedItems.Count > 4)
+            ItemCheckEventArgs myEvent = e as ItemCheckEventArgs;
+            int sCount = ExercisesList.CheckedItems.Count;
+            if (sCount != 0 )
             {
-                object[] list = new object[ExercisesList.CheckedItems.Count];
-                ExercisesList.CheckedItems.CopyTo(list, 0);
-                removingAllowed = !list.Any(x => x == ExercisesList.SelectedItem);
+                Generate.Enabled = true;
             }
-            if (ExercisesList.CheckedItems.Count > 4 && removingAllowed)
+            else
             {
-                ExercisesList.SelectionMode = SelectionMode.None;
+                Generate.Enabled = false;
             }
-            ExercisesList.SelectionMode = SelectionMode.One;
+            //bool removingAllowed = true;
+            //if (ExercisesList.CheckedItems.Count > 4)
+            //{
+            //    object[] list = new object[ExercisesList.CheckedItems.Count];
+            //    ExercisesList.CheckedItems.CopyTo(list, 0);
+            //    removingAllowed = !list.Any(x => x == ExercisesList.SelectedItem);
+            //}
+            //if (ExercisesList.CheckedItems.Count > 4 && removingAllowed)
+            //{
+            //    ExercisesList.SelectionMode = SelectionMode.None;
+            //}
+            //ExercisesList.SelectionMode = SelectionMode.One;
 
         }
     }

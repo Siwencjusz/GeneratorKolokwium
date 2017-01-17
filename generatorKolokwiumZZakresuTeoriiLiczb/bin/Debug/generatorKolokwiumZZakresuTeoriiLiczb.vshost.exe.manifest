@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="generatorKolokwiumZZakresuTeoriiLiczb.exe" version="1.0.0.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="generatorKolokwiumZZakresuTeoriiLiczb.exe" version="1.0.0.7" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="generatorKolokwiumZZakresuTeoriiLiczb" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -54,14 +54,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="generatorKolokwiumZZakresuTeoriiLiczb.exe" size="46584">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="generatorKolokwiumZZakresuTeoriiLiczb.exe" size="53240">
       <assemblyIdentity name="generatorKolokwiumZZakresuTeoriiLiczb" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bp+6xP46CwMpNk90+iS5Q75QkenUt+i/cyIgomgQwyA=</dsig:DigestValue>
+        <dsig:DigestValue>5bvSN03Vqcc7semgXQX542bSHwYWeLg3ted+bzuOTsI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="itextsharp.dll" size="4059136">
+      <assemblyIdentity name="itextsharp" version="5.5.10.0" publicKeyToken="8354AE6D2174DDCA" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>sMuANLVD/qDi+h6UlWBHrb4CHdSrUiq1s83Ekk3rO14=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -89,6 +101,24 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Begin.xml" size="1334">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/hmd1Lip4mtOH4kOjPqcqvTlHrWia9LitgkkDpFqmw0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="End.xml" size="112">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aoVLgXqcwcMzIZUqhaxuozltVxXgelHsSDh4j+5Bi8c=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="generatorKolokwiumZZakresuTeoriiLiczb.exe.config" size="189">
     <hash>
       <dsig:Transforms>
@@ -98,13 +128,13 @@
       <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="XMLFile1.xml" size="2286" writeableType="applicationData">
+  <file name="XMLFile1.xml" size="2806" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>5pA2WlEtvughYX7ZoAICNSe+JUsCGIYLMJMAFP1ogQw=</dsig:DigestValue>
+      <dsig:DigestValue>FkZ90w6yVSaPl1jWtK/YnyZPfo6YZ52aA4o8Bzc59P0=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

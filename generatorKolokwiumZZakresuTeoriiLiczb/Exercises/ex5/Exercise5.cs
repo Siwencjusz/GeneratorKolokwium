@@ -71,7 +71,13 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises
 
         public string GetOutput()
         {
-            return "Zadanie 5" + Environment.NewLine + "a=" + A + " b=" + B + " x=" + X + " a2="+a2+" c2="+c2+" x2="+ x2;
+            return "Zadanie 5" + Environment.NewLine + "a=" + A + " b=" + B + " x=" + X + " a2="+a2+" c2="+c2+" x2="+ x2 + Environment.NewLine;
+        }
+
+        public string GetXML()
+        {
+            var XML = "\\item 5.	Wyznaczyć element odwrotny do  $"+A+" modulbo "+B+"$";
+            return XML;
         }
 
         public string ExerciseName

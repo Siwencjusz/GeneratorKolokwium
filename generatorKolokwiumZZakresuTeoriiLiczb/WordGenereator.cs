@@ -56,18 +56,23 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb
             }
 
             // Save to the output directory:
-
-            try
+            bool saveFailure = true;
+            do
             {
-                doc.Save();
-                Process.Start("Explorer.EXE", Path);
-            }
-            catch (Exception)
-            {
+                try
+                {
+                    doc.Save();
+                    saveFailure = false;
+                    Process.Start("Explorer.EXE", Path);
+                }
+                catch (Exception)
+                {
 
-                MessageBox.Show("Proszę zamknąć plik Word", "Błąd zapisu",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                    MessageBox.Show("Proszę zamknąć plik Word", "Błąd zapisu",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } while (saveFailure);
+            
             
 
             // Open in Word:

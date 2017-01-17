@@ -12,7 +12,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises
         void ReGenerate();
         string GetOutput();
         string ExerciseName { get;}
-    
+        string GetXML();
         //Paragraph ExerciseText();
     }
 }

@@ -87,7 +87,7 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex8
         public string GetOutput()
         {
             return "Zadanie 8" + Environment.NewLine + " x=" + X + " Y=" + Y + " a=" + A + " b=" + B + " c=" + C + " d=" + D + " e=" + E + " f=" + F + " k=" + K + " n=" + N + " k1=" + K1+ Environment.NewLine+
-                "Rozwiązanie a1="+A1+ " b1="+ B1+ " c1="+ C1+ " d1="+ D1+ " e1="+ E1+ " f1="+ F1 + " k="+K+ " k1="+K1+ " x="+X+ " Y="+ Y;
+                "Rozwiązanie a1="+A1+ " b1="+ B1+ " c1="+ C1+ " d1="+ D1+ " e1="+ E1+ " f1="+ F1 + " k="+K+ " k1="+K1+ " x="+X+ " Y="+ Y + Environment.NewLine;
         }
 
         public void ReGenerate()
@@ -99,6 +99,19 @@ namespace generatorKolokwiumZZakresuTeoriiLiczb.Exercises.ex8
         {
             get { return "Zadanie 8"; }
 
+        }
+
+        public string GetXML()
+        {
+            var XML =
+                "\\item Rozwiązać układ kongruencji" + Environment.NewLine +
+                "$" + Environment.NewLine +
+                "\\left\\{ \\begin{array}{ll}" + Environment.NewLine +
+                A+"x+ "+B+"y\\equiv_{"+N+"}"+E+"& \\\\" + Environment.NewLine +
+                C+"x+ "+D+"y\\equiv_{"+N+"}"+F+"&" + Environment.NewLine +
+                "\\end{array} \\right." + Environment.NewLine +
+                "$" + Environment.NewLine;
+            return XML;
         }
     }            //Odpowiedź: wypisać a1 = a mod n i podobnie b1,c1,d1,e1,f1.Wypisać k oraz k1 i x, y.
 }
